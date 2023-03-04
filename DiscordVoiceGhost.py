@@ -4,8 +4,8 @@ from dotenv import load_dotenv
 from discord.ext import commands
 load_dotenv()
 
-GUILD_ID = 801609515391778826
-CHANNEL_ID = 852809421066731550
+GUILD_ID = Insert_Your_GUILD_ID_Here
+CHANNEL_ID = Insert_Your_CHANNEL_ID_Here
 TOKEN = os.getenv('TOKEN')
 
 client=commands.Bot(command_prefix=':', self_bot=True, help_command=None)
