@@ -1,46 +1,33 @@
 # DiscordVoiceGhost
 
-DiscordVoiceGhost is a Python script that allows you to automatically join a specified voice channel on Discord as a self-bot. This script is designed for Discord users who want to automatically join a specific voice channel whenever they log in.
+DiscordVoiceGhost is a Python-based Discord bot that can join and leave voice channels, mute and unmute itself, and clear its own messages in text channels. It is designed to be run as a self-bot, meaning that it uses your Discord account to perform actions.
 
-## Prerequisites
+## Setup
 
-Before you can use DiscordVoiceGhost, you will need to install the following software:
+1. Clone the repository: `git clone https://github.com/Touahmiii/DiscordVoiceGhost.git`
+2. Install the required packages: `pip install -r requirements.txt`
+3. Create a file named `.env` in the root directory of the project and add the following lines:
+```
+TOKEN=your_bot_token_here
+GUILD_ID=your_guild_id_here
+ADMIN_USER_ID=your_admin_user_id_here
+```
 
-- Python 3.8 or higher
-- discord.py-self
+Replace `your_bot_token_here` with your Discord bot token, `your_guild_id_here` with the ID of the guild you want the bot to connect to, and `your_admin_user_id_here` with your own Discord user ID.
 
-## Installation
-
-1. Clone this repository to your local machine using `git clone https://github.com/Touahmiii/DiscordVoiceGhost.git`
-2. Navigate to the directory where the repository was cloned
-3. Install the required Python packages using `pip install -r requirements.txt`
-
-## Obtaining a Discord Token
-
-1. Open Discord in your web browser or desktop app
-2. Log in to your account
-3. Press `Ctrl+Shift+I` to open the Developer Tools
-4. Click the `Application` tab
-5. Select `Local Storage` from the sidebar
-6. Click on `https://discord.com` to expand the options
-7. Find the `token` key and copy the value
-
-**Note**: Make sure to keep your Discord token secret and never share it with anyone. If someone gets hold of your token, they can use your Discord account without your permission.
+4. Run the bot: `python bot.py`
 
 ## Usage
 
-1. Navigate to the directory where the repository was cloned
-2. Create a `.env` file and add your Discord token as follows:
-```
-TOKEN=your_discord_token_here
-```
-3. Replace `GUILD_ID` and `CHANNEL_ID` in the `DiscordVoiceGhost.py` file with the IDs of the guild and voice channel you want to join
-4. Run the script using `python DiscordVoiceGhost.py`
+To use the bot, send it a direct message with one of the following commands:
 
-## Contributing
-
-If you find any bugs or have suggestions for improvement, please feel free to contribute to this project by submitting a pull request.
+- `join`: make the bot join a voice channel
+- `leave`: make the bot leave the current voice channel
+- `mute`: mute the bot in the current voice channel
+- `unmute`: unmute the bot in the current voice channel
+- `clear`: delete all messages sent by the bot in the current text channel
+- `help`: display a help message
 
 ## License
 
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
